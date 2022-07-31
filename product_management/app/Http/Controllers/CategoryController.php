@@ -41,8 +41,8 @@ class CategoryController extends Controller
     {
         //
         $request->validate([
-            'cat_name'=>'required',
-            'cat_desc'=>'required'
+            'cat_name'=>'Required',
+            'cat_desc'=>'Required'
         ]);
         Category::create($request->all());
         return redirect()->route('categorys.index')->with('success','Add succssefully');
@@ -69,7 +69,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         //
-        return view('categorys.update',compact('category'));
+        return view('categorys.edit',compact('category'));
     }
 
     /**
@@ -86,7 +86,10 @@ class CategoryController extends Controller
             'cat_name'=>'Required',
             'cat_desc'=>'Required'
         ]);
-        return  redirect()->route('categorys.index')->with('success','Edit successfully');
+        $category->update($request->all());
+        return redirect()->route('categorys.index')->with('success',
+            'Updated Successfully.');
+
     }
 
     /**
