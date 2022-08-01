@@ -22,6 +22,7 @@
             <tr>
                 <th>No</th>
                 <th>Product Name</th>
+                <th>Category ID</th>
                 <th>Product Description</th>
                 <th>Qty.</th>
                 <th width="280px">More</th>
@@ -30,6 +31,7 @@
                 <tr>
                     <td>{{ ++$i }}</td>
                     <td>{{ $product->product_name }}</td>
+                    <td>{{ $product->category_id }}</td>
                     <td>{{ $product->product_desc }}</td>
                     <td>{{ $product->product_qty }}</td>
                     <td>

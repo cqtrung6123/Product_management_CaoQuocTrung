@@ -31,6 +31,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>category id:</strong>
+                    <input type="text" name="product_name" value="{{$product->category_id}}" class="form-control" placeholder="category id">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Product description:</strong>
                     <textarea type="text" name="product_desc" style="height: 150px" class="form-control" placeholder="product description">{{$product->product_desc}}</textarea>
                 </div>

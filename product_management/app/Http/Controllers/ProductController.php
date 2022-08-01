@@ -26,6 +26,7 @@ class ProductController extends Controller
             'product_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
+            'category_id'=>'required'
         ]);
 
         product::create($request->all());
@@ -48,6 +49,7 @@ class ProductController extends Controller
             'product_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
+            'category_id'=>'required'
         ]);
         $product->update($request->all());
         return redirect()->route('products.index')->with('success',

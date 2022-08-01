@@ -12,6 +12,7 @@ class product extends Model
         'product_name',
         'product_desc',
         'product_qty',
+        'category_id'
 
     ];
 }
